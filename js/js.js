@@ -12,7 +12,7 @@ $(function() {
 
     ctx.fillStyle = "blue";
     ctx.globalAlpha = 0.05;
-    ctx.globalCompositeOperation = "multiply";
+    ctx.globalCompositeOperation = "xor";
 
     window.addEventListener('resize', resizeCanvas, false);
 
@@ -30,13 +30,11 @@ $(function() {
         var offsetY = $(this).offset().top;
         var x = e.pageX - offsetX;
         var y = e.pageY - offsetY;
-        console.log(
-            e.pageX,
-            e.pageY
-        );
+
         ctx.beginPath();
-        ctx.arc(x, y, 20, 0, 2*Math.PI);
+        ctx.arc(x, y, 30, 0, 2*Math.PI);
         ctx.fill();
+        ctx.closePath();
     });
     $('.map').bind('mouseup', function(e) {
         mouseIsDown = false;
