@@ -18,6 +18,7 @@ h1 {
     display: block;
     z-index: 1;
     position: relative;
+    cursor: url(../assets/circle.png) 32 32, auto;
 }
 .color-picker {
     width: 100vw;
@@ -25,19 +26,15 @@ h1 {
     z-index: 2;
 }
 .color-picker div {
-    padding: 1em;
+    padding: 0.8em;
     text-align: center;
     width: 20vw;
     float: left;
-    opacity: 0.5;
     cursor: pointer;
-}
-.color-picker div:hover {
-    opacity: 0.8;
 }
 .color-picker div.active {
     font-weight: bold;
-    height: 4em;
+    height: 3.5em;
     opacity: 1;
 }
 .color-picker div span {
@@ -47,17 +44,17 @@ h1 {
     display: block;
 }
 .color-picker .red {
-    background-color: red;
+    background-color: #FF4742;
 }
 .color-picker .yellow {
-    background-color: yellow;
+    background-color: #FFC924;
 }
 .color-picker .blue {
-    background-color: blue;
+    background-color: #42A5FF;
 }
 .color-picker .green {
-    background-color: green;
+    background-color: #2BDE73;
 }
 .color-picker .black {
-    background-color: black;
+    background-color: #999999;
 }

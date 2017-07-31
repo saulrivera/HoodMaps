@@ -5,7 +5,6 @@ $(function() {
     var ctx = canvas.getContext('2d');
 
     var stab = Number($('.color-picker').height());
-    var head = Number($('h1').height());
     
     $('#map').css('top', stab);
 
@@ -19,7 +18,7 @@ $(function() {
 
     function resizeCanvas() {
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight - (stab + head);
+        canvas.height = window.innerHeight - stab;
     }
 
     if (!localStorage.getItem('session')) {
@@ -47,7 +46,6 @@ $(function() {
         session.item = i;
         session.points.push({'color': ctx.fillStyle, 'x': x, 'y': y});
         i++;
-        console.log(session);
 
         draw(ctx.fillStyle, x, y);
 
