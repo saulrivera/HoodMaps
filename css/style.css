@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+h1 {
+    text-align: center;
+}
+.map {
+    background-image: url('../assets/hoodmaps-amsterdam.png');
+    background-position: center center;
+    background-size: cover;
+    display: block;
+    z-index: 1;
+    position: relative;
+}
+.color-picker {
+    width: 100vw;
+    position: absolute;
+    z-index: 2;
+}
+.color-picker div {
+    padding: 1em;
+    text-align: center;
+    width: 20vw;
+    float: left;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.color-picker div:hover {
+    opacity: 0.8;
+}
+.color-picker div.active {
+    font-weight: bold;
+    height: 4em;
+    opacity: 1;
+}
+.color-picker div span {
+    color: #fff;
+    font-size: 1em;
+    text-shadow: 1px 1px 1px #000;
+    display: block;
+}
+.color-picker .red {
+    background-color: red;
+}
+.color-picker .yellow {
+    background-color: yellow;
+}
+.color-picker .blue {
+    background-color: blue;
+}
+.color-picker .green {
+    background-color: green;
+}
+.color-picker .black {
+    background-color: black;
+}
