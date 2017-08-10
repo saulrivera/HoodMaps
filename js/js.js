@@ -22,13 +22,13 @@ $(function() {
     }
 
     if (!localStorage.getItem('session')) {
-        var session = {
+        let session = {
         'points': [],
         'state': true,
         'item': 0
-        }
+        };
     } else {
-        var session = JSON.parse(localStorage.getItem('session'));
+        session = JSON.parse(localStorage.getItem('session'));
         unwrap(session);
     }
     var i = session.item;
@@ -53,7 +53,7 @@ $(function() {
     $('.map').bind('mouseup', function(e) {
         mouseIsDown = false;
         localStorage.setItem('session', JSON.stringify(session));
-    })
+    });
     $('.color-picker div').bind('click', function() {
         ctx.fillStyle = $(this).data('color');
         $('.color-picker div').removeClass('active');
@@ -64,7 +64,7 @@ $(function() {
         session.points.forEach(function(a) {
             draw(a.color, Number(a.x), Number(a.y));
         });
-    };
+    }
 
     function draw(color, x, y) {
         ctx.fillStyle = color;
